@@ -1,0 +1,42 @@
+*{
+    margin:0; padding: 0;
+}
+h3{
+    background-color: pink;
+    text-align: center;
+    color: white;
+    line-height: 60px;
+}
+div{
+    width: 400px;
+    margin:0 auto;
+}
+h4,p,li{
+    padding: 5px;
+}
+h4:hover{
+color: #D2D2D2
+}
+p:hover{
+    color:#FFDCE2
+}
+dt:hover{
+   color:#FF58B2
+}
+dd:hover{
+    color:#FF58B2
+}
+li:hover{
+    color:#FF58B2
+}
+
+img{
+    width: 400px;
+    height: 250px;
+}
+dl{
+    margin: 15px
+}
+dt{
+    margin: 5px;
+}
