@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<style type="text/css">
-	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
-	</style>
-	<title>异步加载地图</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index1.css">
+    <title>Document</title>
 </head>
 <body>
-	<div id="allmap"></div>
+    <h3>诗意生活</h3>
+    <div>
+        <h4>除了生活还有诗和远方</h4>
+        <img src="images/down.jpg" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem iusto consequuntur officiis architecto? Dolores accusantium debitis tenetur molestiae culpa rem commodi reprehenderit ipsum. Minima, aperiam qui libero illo autem similique!</p>
+        <h4>关于旅行</h4>
+        <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus eveniet consectetur aperiam minus adipisci eum alias rem neque, tempore qui. Aliquam hic sit porro ullam. Suscipit aperiam sunt fuga.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus eveniet consectetur aperiam minus adipisci eum alias rem neque, tempore qui. Aliquam hic sit porro ullam. Suscipit aperiam sunt fuga.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus eveniet consectetur aperiam minus adipisci eum alias rem neque, tempore qui. Aliquam hic sit porro ullam. Suscipit aperiam sunt fuga.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus eveniet consectetur aperiam minus adipisci eum alias rem neque, tempore qui. Aliquam hic sit porro ullam. Suscipit aperiam sunt fuga.</li>
+        </ul>
+        <dl>
+            <dt>尼采说</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor libero alias ad maxime autem itaque. Quisquam eligendi reprehenderit inventore laborum unde assumenda delectus, dolores quos est! Ratione facilis mollitia sit?</dd>
+        </dl>
+    </div>
 </body>
 </html>
-<script type="text/javascript">
-	//百度地图API功能
-	function loadJScript() {
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-		script.src = "http://api.map.baidu.com/api?v=2.0&ak=i65XCuPS89Tnf2XCSz6sK9ynCBvkIpB7&callback=init";
-		document.body.appendChild(script);
-	}
-	function init() {
-		var map = new BMap.Map("allmap");            // 创建Map实例
-		var point = new BMap.Point(116.404, 39.915); // 创建点坐标
-		map.centerAndZoom(point,15);                 
-		map.enableScrollWheelZoom();                 //启用滚轮放大缩小
-
-      //创建小狐狸
-	var pt = new BMap.Point(116.417, 39.909);
-	var myIcon = new BMap.Icon("http://lbsyun.baidu.com/jsdemo/img/fox.gif", new BMap.Size(300,157));
-	var marker2 = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
-	map.addOverlay(marker2);              // 将标注添加到地图中
-	
-	}  
-	window.onload = loadJScript;  //异步加载地图
-</script>
